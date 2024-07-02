@@ -22,7 +22,7 @@ public class NpcStore : Npcbase
     {
         // 상점창 끄기 기능 추가 예정 
         UIManager.instance.StoreFalse();
-        npcName.gameObject.SetActive(true);
+        //npcName.gameObject.SetActive(true);
         npcInfo.gameObject.SetActive(true);
     }
 }

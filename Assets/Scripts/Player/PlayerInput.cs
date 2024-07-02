@@ -145,8 +145,8 @@ public class PlayerInput : MonoBehaviour
          moveHorizontal = Input.GetAxis(moveHorizontalName);
          // fire에 관한 입력 감지
          fire = Input.GetButton(fireButtonName);*/
+        //fire = Input.GetButton();
         fire = Input.GetButton(fireButtonName);
-
         if (Input.GetMouseButtonDown(0)) Moving();
         skill = Input.GetMouseButtonDown(1);
         // reload에 관한 입력 감지

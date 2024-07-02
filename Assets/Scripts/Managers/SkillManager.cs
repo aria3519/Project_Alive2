@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public enum SkillState
 { 
@@ -31,6 +32,7 @@ public class SkillManager : MonoBehaviour
         }
     }
     [SerializeField] ItemData itemData;
+ 
 
     private Vector3 bombPos;
     private Vector3 turretPos;
@@ -52,6 +54,10 @@ public class SkillManager : MonoBehaviour
     private float fastSkillTime;
     private float supplySkillTime;
     private float flameThrowerSkillTime;
+
+    // 신 스킬관련
+    [SerializeField] private List<ParticleSystem> Skills_;
+
 
     public void SetTurretPos(Vector3 pos)
     {
@@ -216,5 +222,16 @@ public class SkillManager : MonoBehaviour
                 return flameThrowerSkillTime;
         }
         return 0;
+    }
+
+
+
+    public void UseSkill(Vector3 pos , in int num , in float attack)
+    {
+        int tempNum = num;
+        if (tempNum >= Skills_.Count) tempNum = 0;
+        Skills_[tempNum].gameObject.SetActive(true);
+        Skills_[tempNum].transform.position = pos;
+        Skills_[tempNum].Play();
     }
 }

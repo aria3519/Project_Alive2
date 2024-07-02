@@ -317,6 +317,8 @@ public class CharOriginal_Alice : Character
                         comboStep += 1;
                     }
                 }
+
+                SkillManager.instance.UseSkill(playerInput.mousePoint, 10,100);
             }
         }
         UseSkill();
