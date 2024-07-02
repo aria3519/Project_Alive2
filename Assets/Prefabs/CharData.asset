@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 371bc7b055de91a4986b28a0c8d5ac55, type: 3}
+  m_Name: CharData
+  m_EditorClassIdentifier: 
+  maxPlayerCharacter: 3
+  maxPlayerUnit: 0
+  maxPlayerTurret: 3
+  charPrefabs:
+  - {fileID: 6979407579910220210, guid: f08e0788c334af44c8caa03785991a7f, type: 3}
+  - {fileID: -510210838201867829, guid: 6c8b2ecf07f010c49aa34bb39c4176e2, type: 3}
+  - {fileID: -1471424322466342, guid: f631855bea1627e47ac7effe974b6e0c, type: 3}
+  unitPrefabs: []
+  turretPrefabs:
+  - {fileID: 8202919407082584, guid: 4e0d8c90232339e42aeb2c71a3e573ef, type: 3}
+  - {fileID: 8202919407082584, guid: 4e0d8c90232339e42aeb2c71a3e573ef, type: 3}
+  - {fileID: 8202919407082584, guid: 4e0d8c90232339e42aeb2c71a3e573ef, type: 3}
+  charPool:
+  - {fileID: 6979407579910220210, guid: f08e0788c334af44c8caa03785991a7f, type: 3}
+  - {fileID: -510210838201867829, guid: 6c8b2ecf07f010c49aa34bb39c4176e2, type: 3}
+  - {fileID: -1471424322466342, guid: f631855bea1627e47ac7effe974b6e0c, type: 3}

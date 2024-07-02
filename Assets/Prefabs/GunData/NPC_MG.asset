@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ebfcf238cd2564db5547ba61ed4a70, type: 3}
+  m_Name: NPC_MG
+  m_EditorClassIdentifier: 
+  weaponType: 1
+  shotClip: {fileID: 8300000, guid: 30114844b380b88418785402b1e582c0, type: 3}
+  reloadClip: {fileID: 8300000, guid: 9eca29ee7f8209e419470fcd586aec21, type: 3}
+  damage: 0
+  ammoRemain: 300
+  magCapacity: 30
+  magAmmo: 30
+  fireDistance: 70
+  timeBetFire: 0.3
+  reloadTime: 3
+  lastFireTime: 0
+  penetNum: 0
+  maxHit: 3
+  maxShotCount: 0

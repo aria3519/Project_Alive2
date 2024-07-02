@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c26640b731091dc4695ea69f0b9ae724, type: 3}
+  m_Name: ItemData
+  m_EditorClassIdentifier: 
+  allGuns:
+  - {fileID: 7896906038811600843, guid: 51e2c371e3a4dbb43bd10e2af30d8e61, type: 3}
+  - {fileID: -4259576972830152336, guid: 9ce0eb210ddfbec4f867c37f0ee17703, type: 3}
+  allMelee:
+  - {fileID: 1335749029824977280, guid: ebc8f1c90e252c646b165cc274829bf5, type: 3}
+  maxGrenade: 10
+  maxFlare: 10
+  maxJetBomber: 2
+  maxSkillGrenade: 10
+  maxBullet: 200
+  maxBossGrenade: 3
+  maxFlameBullet: 20
+  maxItemSupply: 3
+  grenade: {fileID: 4126938552255944847, guid: f6cff42610804a743bb02fde5a81ccab, type: 3}
+  flare: {fileID: -2977878858279786316, guid: 502f397bde12655448ff152eac00cdc7, type: 3}
+  jetBomber: {fileID: 5596101379855850392, guid: b10447bb983d60343ab47d2f8ca01eef, type: 3}
+  bulletGrenade: {fileID: 8588323589407787075, guid: 77ce37ac2e108f84abe4a630f8615327, type: 3}
+  bullet:
+  - {fileID: 5244587130069933544, guid: 9604a068b2d611842a15a80e5632ad6b, type: 3}
+  - {fileID: 5244587130069933544, guid: 8e3fef6f07a10274b8d9878d9633a50a, type: 3}
+  bossGrenade: {fileID: 7542675206602484257, guid: 859f146fe036f1244ae7ad289eda7493, type: 3}
+  flameBullet: {fileID: 9110327195998033794, guid: 9aa4d97158a95474cadb540a69cdcdcf, type: 3}
+  itemSupply: {fileID: 75711212671790834, guid: ce0d17dd969dfe9459b348e58fd572d3, type: 3}

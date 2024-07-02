@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ebfcf238cd2564db5547ba61ed4a70, type: 3}
+  m_Name: GunData_PS
+  m_EditorClassIdentifier: 
+  weaponType: 1
+  shotClip: {fileID: 8300000, guid: 4ef847b9581f57a43a2ed14ab7e6d52e, type: 3}
+  reloadClip: {fileID: 8300000, guid: 9eca29ee7f8209e419470fcd586aec21, type: 3}
+  damage: 15
+  ammoRemain: 100
+  magCapacity: 15
+  magAmmo: 15
+  fireDistance: 20
+  timeBetFire: 0.1
+  reloadTime: 0.5
+  lastFireTime: 0
+  penetNum: 1
+  maxHit: 1
+  maxShotCount: 0

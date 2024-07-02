@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4af4196e07cc63442b05bbf53122580c, type: 3}
+  m_Name: EnemyData
+  m_EditorClassIdentifier: 
+  maxEnemy: 500
+  fastZombie: 0
+  normalZombie: 0
+  slowZombie: 0
+  enemyPrefab:
+  - {fileID: 1562671778933943421, guid: 617d20231469fe04b9a0744033d200ef, type: 3}
+  - {fileID: -2558811740973952623, guid: 484a27f5a7612d540a887c867d48cdaf, type: 3}
+  - {fileID: 5261293773277551711, guid: 4a40dab2baf01014081073cc36861f5e, type: 3}
+  - {fileID: -3197360348351433764, guid: 4d99ecb585e05b946bcebf5ed657b526, type: 3}
+  damage: 0
+  moveSpeed: 0
+  animatorControllers:
+  - {fileID: 9100000, guid: c60bd127d836d15488f77535dc42be82, type: 2}
+  - {fileID: 9100000, guid: 8eebe7519312a5c4eaeed6cd5ebb0411, type: 2}
+  - {fileID: 9100000, guid: 936baa17f96ed5345acc9906c2c36986, type: 2}
