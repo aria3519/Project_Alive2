@@ -93,8 +93,13 @@ public void Move(float _velocity)
              //myRigidbody.MovePosition(myRigidbody.position + heading * velocity * Time.deltaTime);
              myRigidbody.velocity = velocity * heading;
          }*/
-        if(targetPos != new Vector3(-1, -1, -1) || Vector3.Distance(transform.position, targetPos) < 0.1f)
+        if (targetPos != new Vector3(-1, -1, -1) || Vector3.Distance(transform.position, targetPos) < 0.1f)
+        {
             transform.position = Vector3.MoveTowards(transform.position, targetPos, 3 * Time.deltaTime);
+            direction = targetPos.normalized;
+            playerAnimator.SetFloat("MoveHorizontal", direction.x);
+            playerAnimator.SetFloat("MoveVertical", direction.z);
+        }
     }
 
     private void OnDrawGizmos()

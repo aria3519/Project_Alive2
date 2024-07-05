@@ -44,10 +44,21 @@ public class GunGrenadeLauncher : GunController
 
     protected override void Shot(int maxHit)
     {
+        //Debug.LogError("Shot");
         Ray ray = playerInput.viewCamera.ScreenPointToRay(Input.mousePosition);
-        RaycastHit rayHit;
-        if (Physics.Raycast(ray, out rayHit, Mathf.Abs(playerInput.viewCamera.nearClipPlane * 2)))
+        
+        
+        Vector3 nextVec =  transform.forward *5f;
+        nextVec.y = 5;
+       
+        Item grenade = ItemManager.instance.GetQueue(ItemKind.ItemBulletGrenade, transform);
+        Rigidbody rigidGrenade = grenade.GetComponent<Rigidbody>();
+        rigidGrenade.position = fireTransform.position;
+        rigidGrenade.AddForce(nextVec, ForceMode.Impulse);
+        //rigidGrenade.AddTorque(Vector3.back * 10, ForceMode.Impulse);
+        /*if (Physics.Raycast(ray, out rayHit, Mathf.Abs(playerInput.viewCamera.nearClipPlane * 2)))
         {
+            Debug.LogError("Shot???");
             Vector3 nextVec = rayHit.point - transform.position;
             nextVec.y = 5;
 
@@ -56,9 +67,11 @@ public class GunGrenadeLauncher : GunController
             rigidGrenade.position = fireTransform.position;
             rigidGrenade.AddForce(nextVec, ForceMode.Impulse);
             rigidGrenade.AddTorque(Vector3.back * 10, ForceMode.Impulse);
-        }
+        }*/
         gunAudioPlayer.PlayOneShot(gunData.ShotClip);
         magAmmo--;
+
+        //Debug.LogError("Shot end");
     }
 
     protected override IEnumerator ReloadRoutine()

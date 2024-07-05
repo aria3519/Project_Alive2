@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject mainMenuHolder;
     public GameObject optionsMenuHolder;
+    public Canvas _select_window;
 
 
     public Slider[] volumeSliders;
@@ -39,13 +40,17 @@ public class MainMenu : MonoBehaviour
     }
 
 
+    public void Select_Window()
+    {
+        _select_window.gameObject.SetActive(true);
+    }
 
-    public void Play()
+    public void Play(int num =0)
     {
 
 
         SceneManager.LoadScene("MainTown");
-        GameManager.instance.SetDetailOnce();
+        GameManager.instance.SetDetailOnce(num);
         UIManager.instance.StatusTrue();
         GameManager.instance.SetHUDTrue();
         GameManager.instance.GetSceneInfo(true);

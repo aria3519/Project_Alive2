@@ -104,6 +104,8 @@ public class GameManager : MonoBehaviour
 
     private bool isLobby = false;
 
+    public int playerNum { private set; get; } = -1;
+
     //--------------
     private static GameManager m_instance;
     public static GameManager instance
@@ -167,7 +169,7 @@ public class GameManager : MonoBehaviour
     {
         if (isStageStarted)
         {
-            TestUnitManager.Instance.CreatePlayer();
+            TestUnitManager.Instance.CreatePlayer(playerNum);
             isStageStarted = false;
         }
         if (isMenu)
@@ -258,10 +260,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SetDetailOnce()
+    public void SetDetailOnce(in int num )
     {
         detailOnce = true;
         isLobby = false;
+        playerNum = num;
     }
     
 

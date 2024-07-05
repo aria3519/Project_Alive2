@@ -130,6 +130,7 @@ public class ItemManager : MonoBehaviour
     // 풀링 내보내기
     public Item GetQueue(ItemKind index, Transform transform)
     {
+        //Debug.LogError("GetQueue"+ index +"Transform " + transform.position);
         var item = itemPool[index].Dequeue();
         item.transform.position = transform.position;
         item.transform.rotation = transform.rotation;

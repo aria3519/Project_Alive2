@@ -13,7 +13,7 @@ public class ChangeSence : MonoBehaviour
         SceneManager.LoadScene("Stage5");
         GameManager.instance.SetHUDTrue();
         UIManager.instance.BattleTrue();
-        GameManager.instance.SetDetailOnce();
+        GameManager.instance.SetDetailOnce(GameManager.instance.playerNum);
         GameManager.instance.SetNowScene((int)KindScene.KindScene_Stage); // 2 stage의 경우  
         UIManager.instance.OffNpcHotKey();
         //UnitManager.instance.gameObject.SetActive(true);
@@ -23,6 +23,7 @@ public class ChangeSence : MonoBehaviour
     {
         Cursor.visible = false;
         SceneManager.LoadScene("Stage6");
+        UIManager.instance.BattleTrue();
         GameManager.instance.SetHUDTrue();
         GameManager.instance.SetNowScene((int)KindScene.KindScene_Stage); // 2 stage의 경우  
         //UnitManager.instance.gameObject.SetActive(true);
@@ -32,6 +33,7 @@ public class ChangeSence : MonoBehaviour
     {
         Cursor.visible = false;
         SceneManager.LoadScene("Stage7");
+        UIManager.instance.BattleTrue();
         GameManager.instance.SetHUDTrue();
         GameManager.instance.SetNowScene((int)KindScene.KindScene_Stage); // 2 stage의 경우  
         //UnitManager.instance.gameObject.SetActive(true);
@@ -40,6 +42,7 @@ public class ChangeSence : MonoBehaviour
     {
         Cursor.visible = false;
         SceneManager.LoadScene("Stage8");
+        UIManager.instance.BattleTrue();
         GameManager.instance.SetHUDTrue();
         GameManager.instance.SetNowScene((int)KindScene.KindScene_Stage); // 2 stage의 경우  
         //UnitManager.instance.gameObject.SetActive(true);

@@ -89,7 +89,7 @@ public class TestUnitManager : MonoBehaviour
         }
     }
 
-    public void CreatePlayer()
+    public void CreatePlayer(int num = 0)
     {
         if (PlayerSpawnPoint)
         {
@@ -98,6 +98,22 @@ public class TestUnitManager : MonoBehaviour
             currentPlayer.transform.position = PlayerSpawnPoint.position;
             characterEvent.Raise(currentPlayer);
             chagnedCam.TargetSet(currentPlayer.transform);
+
+            for (int i = 0; i < num; i++)
+            {
+                Vector3 pos;
+                pos = currentPlayer.transform.position;
+                currentPlayer.ResetSP();
+                ReturnPlayerList(currentPlayer);
+                currentPlayer.ResetSP();
+                ReturnPlayerList(currentPlayer);
+                currentPlayer = GetPlayerList();
+                currentPlayer.transform.position = pos;
+                chagnedCam.TargetSet(currentPlayer.transform);
+                characterEvent.Raise(currentPlayer);
+                UIManager.instance.reloadAlarm.gameObject.SetActive(false);
+            }
+
         }
     }
 

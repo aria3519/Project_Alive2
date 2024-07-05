@@ -302,7 +302,7 @@ public class CharOriginal_Alice : Character
             if (Time.time >= lastAttackTime + meleeData.TimeBetAttack)
             {
                 lastAttackTime = Time.time;
-
+                SkillManager.instance.UseSkill(this.transform.position, playerInput.mousePoint, 4, 100);
                 if (comboStep == 0)
                 {
                     playerAnimator.SetTrigger("Attack");
@@ -317,8 +317,6 @@ public class CharOriginal_Alice : Character
                         comboStep += 1;
                     }
                 }
-
-                SkillManager.instance.UseSkill(playerInput.mousePoint, 10,100);
             }
         }
         UseSkill();

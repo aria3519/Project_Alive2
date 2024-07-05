@@ -226,12 +226,20 @@ public class SkillManager : MonoBehaviour
 
 
 
-    public void UseSkill(Vector3 pos , in int num , in float attack)
+    public void UseSkill(Vector3 playerPos, Vector3 pos , in int num , in float attack)
     {
         int tempNum = num;
-        if (tempNum >= Skills_.Count) tempNum = 0;
+        if (tempNum >= Skills_.Count)
+        { 
+            tempNum = 0;
+            Debug.Log("그런 스킬 없음 tempNum:" + tempNum);
+            return;
+        }
         Skills_[tempNum].gameObject.SetActive(true);
         Skills_[tempNum].transform.position = pos;
+        Skills_[tempNum].transform.forward =(playerPos - pos);
+
+
         Skills_[tempNum].Play();
     }
 }

@@ -168,7 +168,7 @@ public class PlayerInput : MonoBehaviour
 
         dodge = Input.GetButtonDown(dodgeName);
 
-        swap = Input.GetButtonDown(swapName);
+        //swap = Input.GetButtonDown(swapName);
 
         interact = Input.GetButtonDown(interactName);
 
